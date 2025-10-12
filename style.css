@@ -1,0 +1,555 @@
+/* Reset básico */
+@font-face{
+  font-family: 'fonte1';
+  src: url('fontes/CreatoDisplay-Regular.otf') format('woff2'),
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #F0F2F5;
+}
+
+/* Container global: largura fixa, centralizado */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* =============== HEADER =============== */
+.header {
+  padding: 15px 0;
+}
+
+.header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.placeholder-logo img {
+  width: 200px;
+  height: 60px;
+  display: block;
+}
+
+.nav-menu {
+  border: 2px solid #000;
+  width: 1023px; /* mantido conforme seu original */
+  border-radius: 27px;
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: 'fonte1', Arial, sans-serif;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* =============== BANNER =============== */
+.banner {
+  position: relative;
+  margin: 30px 0;
+}
+
+.hero-image-placeholder {
+  background-image: url('img/BannerGif.gif');
+  background-size: cover;       /* Faz a imagem cobrir toda a div */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  
+  width: 1270px;
+  height: 650px;
+  border-radius: 20px;
+  border: 2px solid #000; /* Corrigido: faltava "solid" */
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 23px;
+  margin-top: 10px;
+  font-family: 'fonte1', Arial, sans-serif;
+}
+
+.hero-text img{
+ width: 1300px;
+ height: 432px;
+}
+
+/* =============== SEPARADOR =============== */
+.separator-line {
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  margin: 20px auto 40px;
+}
+
+/* =============== TEXTO HERO CENTRALIZADO =============== */
+.hero-text-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.text-small {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.text-bold {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.text-large-bold {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.text-small-uppercase {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+/* =============== TRABALHOS (3 VÍDEOS) =============== */
+.trabalhos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin: 40px auto;
+  width: 1200px;
+}
+
+.trabalho-item {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.capa-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#video-modal video {
+  max-width: 90%;
+  max-height: 80%;
+  outline: none;
+}
+/* =============== TÍTULOS DE SEÇÃO =============== */
+.section-title {
+  text-align: center;
+  margin: 50px 0 30px;
+  width: 1200px;
+  margin: 50px auto 30px;
+}
+
+.title-top {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+}
+
+.title-main {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.title-sub {
+  font-size: 24px;
+  font-weight: normal;
+  color: #666;
+  margin-top: -10px;
+}
+
+/* =============== CARROSSEL =============== */
+/* Reset básico */
+/* =============== CARROSSEL =============== */
+.carousel-section {
+  padding: 40px 0;
+  background: #f5f5f5;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0;
+
+  /* Esconde a barra de rolagem */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  width: 878px;
+  height: 635px;
+  border: 3px solid #050505;
+  border-radius: 60px;
+  background: #F0F2F5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.favorite-icon img {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+}
+
+.card-content-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* === CONTAINERS DE IMAGEM (NÃO CENTRALIZAM — SÓ DEFINEM TAMANHO DO ESPAÇO) === */
+
+.card-image-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: flex-start; /* Não centraliza verticalmente */
+  justify-content: flex-start; /* Não centraliza horizontalmente */
+  padding: 30px;
+}
+
+/* Modsy App – celular1.png */
+.card-image-placeholder.image-type-app {
+  width: 400px;
+}
+
+.card-image-placeholder.image-type-app img {
+  width: 355px;
+  height: 634px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Guarda Roupa Inclusivo – celular2.png */
+.card-image-placeholder.image-type-inclusivo {
+  width: 357px;
+  height: 615px;
+}
+
+.card-image-placeholder.image-type-inclusivo img {
+  width: 357px;
+  height: 615px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Guarda-Roupa Inteligente – guarda-roupa.png */
+.card-image-placeholder.image-type-guarda-roupa {
+  width: 520px;
+}
+
+.card-image-placeholder.image-type-guarda-roupa img {
+  width: 480px;
+  height: 600px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* === TEXTO E BOTÕES === */
+
+.card-text-content {
+  padding: 40px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-text-content h3 {
+  margin: 0 0 16px 0;
+  font-size: 44px;
+  color: #9b7aff;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.card-text-content p {
+  font-size: 30px;
+  color: #333;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.install-button,
+.buy-button {
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #000;
+  text-decoration: none;
+  border-radius: 32px;
+  font-weight: bold;
+  font-size: 16px;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+.install-button:hover,
+.buy-button:hover {
+  background: #333;
+}
+/* =============== SEÇÕES COM DUAS COLUNAS =============== */
+.como-surgiu,
+.app-inclusivo {
+  padding: 60px 0;
+}
+
+.como-surgiu .container,
+.app-inclusivo .container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.image-column,
+.text-column1 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  border-radius: 8px;
+}
+
+.text-column1 p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.text-column1 h2 {
+  font-size: 24px;
+  margin: 25px 0 15px;
+  color: #333;
+}
+
+/* =============== SOBRE NÓS =============== */
+.sobre-nos {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.sobre-nos-wrapper {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.image-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #000;
+  color: white;
+  padding: 30px;
+  position: relative;
+}
+
+.text-column h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.text-column p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.logo-placeholder {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  border-radius: 4px;
+}
+
+/* =============== FOOTER =============== */
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 0 0;
+  margin-top: 60px;
+}
+
+.footer .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.icon-placeholder {
+  width: 30px;
+  height: 30px;
+  background-color: #6c5ce7;
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  background-color: #9b59b6;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  width: 1200px;
+  margin: 30px auto 0;
+  box-sizing: border-box;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+}
