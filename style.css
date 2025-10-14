@@ -290,7 +290,7 @@ body {
 /* =============== CARROSSEL =============== */
 .carousel-section {
   padding: 40px 0;
-  background: #f5f5f5;
+  width: 1512px;
 }
 
 .carousel-container {
@@ -365,9 +365,17 @@ body {
   height: 100%;
   padding: 0;
   box-sizing: border-box;
+  margin-left: -200px;
+}
+.card-content-wrapperA {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
   margin-left: -50px;
 }
-
 /* =============== IMAGENS =============== */
 .card-image-placeholder {
   height: 100%;
@@ -393,7 +401,7 @@ body {
 
 /* Guarda Roupa Inclusivo – celular2.png */
 .card-image-placeholder.image-type-inclusivo {
-  width: 500px; /* ← ajustado para não empurrar o texto */
+  width: 800px; /* ← ajustado para não empurrar o texto */
 }
 
 .card-image-placeholder.image-type-inclusivo img {
@@ -435,12 +443,28 @@ body {
   justify-content: center;
   min-width: 300px; /* Garante espaço mínimo para o texto */
   box-sizing: border-box;
-  margin-left: -50px;
+  margin-left: -250px;
+  width: 505px;
+  z-index: 2;
+}
+
+.card-text-contentA {
+  padding: 40px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px; /* Garante espaço mínimo para o texto */
+  box-sizing: border-box;
+  margin-left: -80px;
+  width: 505px;
+  z-index: 2;
 }
 
 .card-text-content h3 {
   margin: 0 0 16px 0;
-  font-size: 44px;
+  font-size: 45px;
   color: #050505; /* Preto */
   font-weight: bold;
   letter-spacing: -0.5px;
@@ -452,44 +476,77 @@ body {
 .card-text-content h3 span {
   color: #A89CF2; /* Roxo */
   font-weight: normal;
+  font-size: 45px;
   display: block; /* Garante que "INCLUSIVO" fique embaixo */
 }
 
-.card-text-content p {
-  font-size: 32px;
-  color: #050505;
-  margin: 0 0 24px 0;
-  line-height: 1.5;
-  font-family: 'fonte1', sans-serif;
-  word-break: break-word;
-}
 .card-text-contentI h3 {
   margin: 0 0 16px 0;
-  font-size: 44px;
+  font-size: 45px;
   color: #050505; /* Preto */
-  font-weight: bold;
   letter-spacing: -0.5px;
   line-height: 1.2;
   font-family: 'fonte4', sans-serif;
   word-break: break-word;
+  width: 505px;
 }
 
 .card-text-contentI h3 span {
   color: #A89CF2; /* Roxo */
   font-weight: normal;
+  font-size: 45px;
   display: block; /* Garante que "INCLUSIVO" fique embaixo */
 }
 
-.card-text-contentI p {
-  font-size: 32px;
+.card-text-contentA h3 {
+  margin: 0 0 16px 0;
+  font-size: 45px;
+  color: #050505; /* Preto */
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  font-family: 'fonte4', sans-serif;
+  word-break: break-word;
+  width: 505px;
+}
+
+.card-text-contentA h3 span {
+  color: #A89CF2; /* Roxo */
+  font-weight: normal;
+  font-size: 45px;
+  display: block; /* Garante que "INCLUSIVO" fique embaixo */
+}
+.card-text-content p {
+  font-size: 25px;
   color: #050505;
   margin: 0 0 24px 0;
   line-height: 1.5;
   font-family: 'fonte1', sans-serif;
   word-break: break-word;
 }
+
+.card-text-contentI p {
+  font-size: 25px;
+  color: #050505;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+  font-family: 'fonte1', sans-serif;
+  word-break: break-word;
+  width: 450px;
+}
+.card-text-contentA p {
+  font-size: 25px;
+  color: #050505;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+  font-family: 'fonte1', sans-serif;
+  word-break: break-word;
+  width: 450px;
+}
 .install-button,
 .buy-button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
   width: 160px;
   height: 50px;
   display: flex;
@@ -500,11 +557,10 @@ body {
   text-decoration: none;
   border-radius: 32px;
   font-size: 22px;
-  align-self: flex-start;
   transition: background 0.2s ease;
   font-family: 'fonte1', sans-serif;
-  margin-left: 0; /* Alinhado com o texto, não com margem fixa */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 }
 
 .install-button:hover,
