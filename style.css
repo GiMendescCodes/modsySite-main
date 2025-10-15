@@ -30,6 +30,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #F0F2F5;
+  overflow-x: hidden;
 }
 
 /* Container global: largura fixa, centralizado */
@@ -42,6 +43,7 @@ body {
 /* =============== HEADER =============== */
 .header {
   padding: 15px 0;
+  align-items: center;
 }
 
 .header .container {
@@ -71,7 +73,7 @@ body {
   justify-content: flex-start; /* Itens alinhados à esquerda dentro do menu */
   padding: 0 20px;
   box-sizing: border-box;
-  margin-right: -50px;
+
 }
 
 .nav-menu ul {
@@ -105,6 +107,7 @@ body {
   margin: 30px 0;
   display: flex;
   justify-content: center;
+  margin-right: 60px;
 }
 
 .hero-image-placeholder {
@@ -290,7 +293,7 @@ body {
 /* =============== CARROSSEL =============== */
 .carousel-section {
   padding: 40px 0;
-  width: 1512px;
+  width: 100%;
 }
 
 .carousel-container {
@@ -307,7 +310,7 @@ body {
   gap: 30px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 10px 0 10px 100px; /* Espaço à esquerda */
+  padding: 10px 100px; /* ← PADDING SIMÉTRICO */
   scroll-behavior: smooth;
 
   /* Esconde a barra de rolagem */
@@ -568,11 +571,47 @@ body {
   background: #333;
 }
 /* =============== SEÇÕES COM DUAS COLUNAS =============== */
+.title-main2 {
+  font-size: 85px;
+  margin: 10px 0 0 0;
+  font-family: 'fonte4', sans-serif;
+  color: #050505;
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  margin-left: 0px;
+  letter-spacing: 0.23em;
+}
+.section-title2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.title-sub2 {
+  font-size: 92px;
+  font-family: 'fonte3', sans-serif;
+  color: #050505;
+  margin: 0;
+  display: block;
+  line-height: 1;
+  font-weight: lighter;
+  letter-spacing: 0.23em;
+  margin-top: 10px;
+}
 .como-surgiu,
 .app-inclusivo {
   padding: 60px 0;
 }
-
+.separator-line{
+  width: 752px;
+  height: 3px;
+  background-color: #000;
+  margin: 0 auto 40px;
+  border-radius: 1.5px;
+}
 .como-surgiu .container,
 .app-inclusivo .container {
   display: flex;
@@ -586,6 +625,7 @@ body {
 width: 472px;
 height: 839px;
 border-radius: 20px;
+margin-top: -350px;
 }
 .imgCollum{
 width: 489px;
@@ -612,15 +652,20 @@ border-radius: 20px;
 }
 
 .text-column1 p {
-  font-size: 16px;
+  font-size: 30px;
   line-height: 1.7;
   margin-bottom: 20px;
+  font-family: 'fonte1', sans-serif;
+  color: #000000;
+  text-align: justify;
+  width: 755px;
 }
 
 .text-column1 h2 {
-  font-size: 24px;
+  font-size: 50px;
   margin: 25px 0 15px;
-  color: #333;
+  color: #000000;
+  font-family: 'fonte4', sans-serif;
 }
 
 /* =============== SOBRE NÓS =============== */
@@ -691,7 +736,7 @@ height: 131px;
 }
 
 .footer .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -733,7 +778,7 @@ height: 131px;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-  width: 1200px;
+  width: 100%;
   margin: 30px auto 0;
   box-sizing: border-box;
 }
